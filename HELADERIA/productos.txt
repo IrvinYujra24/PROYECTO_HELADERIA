@@ -1,0 +1,10 @@
+H. de Mani
+helado de coco
+Helado de acai
+Helado de pera  60
+Helado de Naranja  65
+Helado de sandia  70
+Helado de chispitas  20 Helados
+Helado de mango  12 Helados
+Helado de mani  12 Helados
+Pedro  El escamoso 12356 2
