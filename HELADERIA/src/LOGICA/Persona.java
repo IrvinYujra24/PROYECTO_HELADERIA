@@ -1,10 +1,14 @@
 package LOGICA;
 
+import DATOS.personaDb;
+
 public class Persona {
 	private String nombre;
 	private String apellidos;
 	private String ci;
 	private int edad;
+	private int id;
+	
 	public Persona(String nombre, String apellidos, String ci, int edad) {
 	
 		this.nombre = nombre;
@@ -37,8 +41,13 @@ public class Persona {
 	}
 	public void setEdad(int edad) {
 		this.edad = edad;
-	}	
-	
+	}		
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public void registrar_persona() {
 		
 	}
@@ -47,4 +56,26 @@ public class Persona {
 		return "Persona [nombre=" + nombre + ", apellidos=" + apellidos + ", ci=" + ci + ", edad=" + edad + "]";
 	}
 	
+	public String listar_personas() {
+		String salida="";
+		salida=personaDb.obtenerPersonas();
+		return salida;
+	}
+	
+	public String insertarPersona() {	
+		if(personaDb.insertarPersona(this)) {
+			return "Persona ingresada correctamente";
+		}else {
+			return "Error en el registro";
+		}
+	}
+	
+	
+	public String editarPersona() {
+		if(personaDb.editarPersona(this)) {
+			return "Persona editada correctamente";
+		}else {
+			return "Error en la actualización";
+		}
+	}
 }
