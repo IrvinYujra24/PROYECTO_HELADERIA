@@ -6,13 +6,12 @@ import java.sql.SQLException;
 
 public class conexion {
 	 // Parámetros de conexión
-	 private static final String URL = "jdbc:mysql://localhost:3306/dbheladeria";
+	 private static final String URL = "jdbc:mysql://localhost:3307/dbHeladeria";
 	 private static final String USER = "root";
 	 private static final String PASSWORD = "112358";
 
 	 public static Connection conectar() throws SQLException {
 	     try {
-	         // Cargar el driver (opcional en versiones modernas de JDBC)
 	         Class.forName("com.mysql.cj.jdbc.Driver");
 	     } catch (ClassNotFoundException e) {
 	         throw new SQLException("Driver MySQL no encontrado", e);

@@ -154,6 +154,7 @@ public class frmPersona extends JFrame {
 				txaClientes.setWrapStyleWord(true);
 				txaClientes.setLineWrap(true);
 				txaClientes.setFont(new Font("Raleway", Font.PLAIN, 13));
+				txaClientes.setEditable(false);
 				
 				JLabel lblId = new JLabel("ID");
 				lblId.setBounds(10, 250, 46, 14);
@@ -221,5 +222,10 @@ public class frmPersona extends JFrame {
 		btnEditar.setBounds(128, 0, 40, 40);
 		panel.add(btnEditar);
 		btnEditar.setIcon(new ImageIcon(frmPersona.class.getResource("/RESOURCES/icons8_edit_file_32px.png")));
+		
+		tbxNombre.setNextFocusableComponent(tbxApellido);
+		tbxApellido.setNextFocusableComponent(tbxCi);
+		tbxCi.setNextFocusableComponent(tbxEdad); 
+		tbxEdad.setNextFocusableComponent(tbxNombre);
 	}
 }
